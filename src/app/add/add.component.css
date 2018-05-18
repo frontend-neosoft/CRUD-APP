@@ -1,0 +1,40 @@
+.padding-left {
+  padding-right: 0px;
+}
+.padding-right {
+  padding-left: 0px;
+}
+.no-padding {
+  padding: 0px;
+}
+
+.add-right h1{color: #0e2c44;font-size: 25px;margin-bottom: 25px;}
+.add-right {
+  margin: 30px 0px;
+  background-color: #ffffff;
+  display: block;
+  overflow: hidden;
+  padding:20px;
+}
+#add-body{
+    background-color: #edecfa;
+}
+.form-group{
+  margin-bottom: 30px;
+}
+.button-search a{ color: #ffffff;text-align: center;text-transform:   uppercase;
+font-size: 16px;
+font-weight: 400;}
+.button-search{
+  background-color: #ed8a39;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 3px;
+  text-transform:   uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  width: 150px;
+}
+.btn-default{
+  background-color: grey;
+}

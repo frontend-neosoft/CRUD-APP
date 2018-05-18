@@ -1,0 +1,83 @@
+<page-header></page-header>
+
+<div id="add-body">
+  <div class="container">
+    <div class="row">
+      <navigation></navigation>
+      <!-- <div class="col-md-3">
+        <ul class="list-group">
+          <li> <a href="#">Dashboard</a> </li>
+          <li class="active"> <a href="#">School</a> </li>
+          <li> <a href="#">Mentor</a> </li>
+          <li> <a href="#">Group</a> </li>
+          <li> <a href="#">Student</a> </li>
+          <li> <a href="#">Report</a> </li>
+          <li> <a href="#">Indicators</a> </li>
+          <li> <a href="#">Contact</a> </li>
+          <li> <a href="#">Help</a> </li>
+        </ul>
+      </div> -->
+      <div class="col-md-9 ">
+        <div class="add-right">
+          <div class="top">
+            <h1>School > Edit</h1>
+      <button type="button" class="btn button-search right">Delete</button>
+
+      {{record}}
+
+        <form>
+  <div class="form-group row">
+    <label for="name_en" class="col-sm-2 col-form-label">School Name</label>
+    <div class="col-sm-10">
+      <input name="name_en" [(ngModel)]="record.name_en"  type="text" class="form-control" id="name_en">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="name_zh" class="col-sm-2 col-form-label">Chinese Name</label>
+    <div class="col-sm-10">
+      <input name="name_zh"  [(ngModel)]="record.name_zh" type="text" class="form-control" id="name_zh">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="code"  class="col-sm-2 col-form-label">Short Code</label>
+    <div class="col-sm-10">
+      <input name="code" type="text" [(ngModel)]="record.code" class="form-control" id="code">
+    </div>
+  </div>
+  <div class="form-group row">
+       <label for="type" class="col-sm-2 col-form-label"> Gender</label>
+       <div class="col-sm-10">
+       <select name="type" id="type"  [(ngModel)]="record.type" class="form-control">
+         <option value="co-ed" selected>Co-ed school</option>
+         <option value="girl">Girl's School</option>
+         <option value="boy">Boy's School</option>
+       </select>
+     </div>
+     </div>
+  <div class="form-group row">
+    <div class="col-sm-2">Active</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input name="active" [(ngModel)]="record.active" class="form-check-input" type="checkbox" id="active">
+        <label class="form-check-label" for="active">
+
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <div class="form-group">
+          <button type="button" (click)="saveEdits(record.school_id)" class="btn button-search">Save</button>
+          <button type="reset" class="btn btn-default button-search" >Cancel</button>
+
+      </div>
+    </div>
+  </div>
+</form>
+
+        </div>
+      </div>
+    </div></div>
+  </div>
+</div>

@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+Steps for installation
+
+1) extract zip archive
+2) open cmd in root folder of the project
+3) Run npm install to install node dependencies
+4) Run ng serve to serve the application to browser

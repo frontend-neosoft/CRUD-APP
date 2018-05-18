@@ -1,0 +1,21 @@
+- Make a simple CRUD web portal with a list view, a add view and a edit view for listing, adding and editing data.
+
+- Detail on list view:
+  * The data in list view can be find in school_data.json and you can assume this will be the response coming from server.
+  * The action/inactive select box can filter the list view by status after the search form submitted
+  * The 2017-18 select box can be ignored and left out for now
+  * The All - A - Z filter the list by the start of name_en and is case insensitive
+  * Clicked Add button will go to add view to create new record
+  * Clicked Edit button will go to edit view to edit existing record when exact 1 record is selected. Display warning message if 0 or 2 or more records are selected.
+  * Clicked Active or Inactive button will change the status of all selected records
+
+- Detail on add view
+  * The Gender select box options can be hard-coded for now. Check the school_data.json for the value of each options.
+  * Clicked cancel button will discard the current values. The page should go back to list view afterward.
+  * Clicked save button will add a record to the list view. The page should go back to list view afterward.
+  * Do not allow saving data when required fields are not completed
+
+- Detail on edit view
+  * Values from existing record should be filled in the form
+  * Clicked delete button at the top right corner will delete the record in the list view. The page should go back to list view afterward.
+  * See Detail on add view for remaining details

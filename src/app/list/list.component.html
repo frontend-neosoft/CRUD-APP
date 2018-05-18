@@ -1,0 +1,151 @@
+<page-header></page-header>
+
+<div id="list-body">
+  <div class="container">
+    <div class="row">
+      <navigation></navigation>
+      <!-- <div class="col-md-3">
+        <ul class="list-group">
+          <li> <a href="#">Dashboard</a> </li>
+          <li class="active"> <a href="#">School</a> </li>
+          <li> <a href="#">Mentor</a> </li>
+          <li> <a href="#">Group</a> </li>
+          <li> <a href="#">Student</a> </li>
+          <li> <a href="#">Report</a> </li>
+          <li> <a href="#">Indicators</a> </li>
+          <li> <a href="#">Contact</a> </li>
+          <li> <a href="#">Help</a> </li>
+        </ul>
+      </div> -->
+      <div class="col-md-9">
+        <!-- <div class="row"> -->
+        <div class="Panel-body-right">
+          <h1>School</h1>
+          <div class="col-md-6 no-padding">
+            <div id="custom-search-input">
+              <div class="input-group">
+                <input type="text" [(ngModel)]="searchString" name="searchString" id="searchString" class="  search-query form-control" placeholder="Search" />
+                <span class="input-group-btn">
+                     <button  class="btn btn-danger" type="button">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                     </button>
+                 </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 padding-left">
+            <select class="form-control form-control-lg select" [(ngModel)] = "filterStatus" name="filterStatus" id="filterStatus"  required>
+              <option value="all">All </option>
+              <option value="1">Active</option>
+              <option value="0">Inactive </option>
+
+              </select>
+
+          </div>
+          <div class="col-md-2 padding-left">
+            <select class="form-control form-control-lg select" name="category" id="validationCustom03" onchange="ChangecatList()" required>
+              <option value="">2017-18 </option>
+              <option value="0">Dashboard</option>
+              <option value="0">School </option>
+              <option value="0">Help</option>
+              <option value="0">student</option>
+              <option value="0">report</option>
+              <option value="0">indicator</option>
+              </select>
+
+          </div>
+          <div class="col-md-2 padding-left">
+            <div class="">
+              <button type="button" (click)="search()" class="btn button-search">Search</button>
+            </div>
+
+          </div>
+          <div class="col-md-12 no-padding">
+            <ul class="list-inline">
+              <li>
+                <div class="button-search">
+                  <a routerLink="/add" class="btn"><i class="fa fa-plus" aria-hidden="true"></i> Add</a>
+                </div>
+              </li>
+              <li>
+                <div class="button-search">
+                  <a (click)="navigateToEdit()" class="btn">Edit</a>
+                </div>
+              </li>
+              <li>
+                <div class="button-search">
+                  <a href="javascript:void(0)" class="btn" (click)="changeStatus(true)">Active</a>
+                </div>
+              </li>
+              <li>
+                <div class="button-search">
+                  <a href="javascript:void(0)" class="btn" (click)="changeStatus(false)">inactive</a>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+          <div class="col-md-12 no-padding">
+            <ul class="list-inline">
+              <li *ngFor="let alpha of alphabeticalSort">
+                <a (click)="filterByAlphabet(alpha)" href="javascript:void(0)">{{alpha}}</a>
+              </li>
+
+
+            </ul>
+            <div class="table-responsive">
+
+
+              <table id="mytable" class="table table-bordred table-striped">
+                <thead>
+                  <th>
+
+                    <div class="checkbox">
+                      <input id="checkbox1" type="checkbox">
+                      <label for="checkbox1"></label>
+                    </div>
+                  </th>
+                  <!-- <th><input type="checkbox" id="checkall"  /> </th> -->
+                  <th>Name</th>
+                  <th>Code</th>
+                  <th>Status</th>
+                </thead>
+                <tbody  *ngIf="schoolData.length > 0">
+
+                    <tr *ngFor="let school of schoolData; let idx = index">
+                      <td>
+                        <div class="checkbox">
+                          <input type="checkbox" (change)="changeSelection()" id="{{school.school_id}}" value="{{school.school_id}}" name="schools[]" [(ngModel)]="schoolData[idx].selected" />
+                          <label for="{{school.school_id}}"></label>
+                        </div>
+                      </td>
+                      <td>{{school.name_en}}</td>
+                      <td>{{school.code}}</td>
+                      <td><span *ngIf="school.active">active</span>
+                        <span *ngIf="!school.active">inactive</span></td>
+                    </tr>
+
+                  </tbody>
+                  <tbody  *ngIf="schoolData.length == 0">
+                  <tr >
+                    <td colspan="4">
+                      <p>Data not available.</p>
+                    </td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</div>

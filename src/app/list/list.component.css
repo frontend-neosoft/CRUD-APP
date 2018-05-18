@@ -1,0 +1,173 @@
+.padding-left {
+  padding-right: 0px;
+}
+.padding-right {
+  padding-left: 0px;
+}
+.no-padding {
+  padding: 0px;
+}
+
+#list-body{
+  background-color: #edecfa;
+}
+
+#list-body .list-group {
+  list-style-type: none;
+  line-height: 30px;
+  background-color: #ffffff;
+  /* padding: 0px 10px; */
+  margin: 30px 0px;
+}
+
+#list-body .list-group li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #dcd9d9;
+}
+
+#list-body .list-group li a {
+  font-size: 19px;
+  color: #676767;
+}
+
+#list-body .list-group li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#list-body .list-group li:hover {
+  text-decoration: none;
+  background-color: #ed8a39;
+  color: #ffffff;
+  border-left: 10px solid #1f8bf7;
+}
+
+#list-body .active {
+  font-weight: 400;
+  border-left: 10px solid #ed8a39;
+}
+
+input[type=text] {
+  width: 100%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+#custom-search-input {
+  margin: 0;
+  padding: 0;
+}
+
+#custom-search-input .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#custom-search-input button {
+  border: 0;
+  background: none;
+  /** belows styles are working good */
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #D9230F;
+}
+
+.input-group {
+  display: flex;
+}
+
+.search-query:focus+button {
+  z-index: 3;
+}
+
+.Panel-body-right {
+  margin: 30px 0px;
+  background-color: #ffffff;
+  display: block;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.select {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+.button-search a{ color: #ffffff;text-align: center;text-transform:   uppercase;
+font-size: 16px;
+font-weight: 400;}
+.button-search{
+  background-color: #ed8a39;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 3px;
+  text-transform:   uppercase;
+  font-size: 16px;
+  font-weight: 400;
+}
+.list-inline{margin: 12px 0px;}
+.list-inline li  .active{font-size: 16px;padding-left: 7px;color: blue;}
+.list-inline li{font-size: 16px;padding-left: 7px;}
+/* checkbox*/
+.table>thead>th{padding: 8px;font-size: 18px;}
+.table>tbody>tr>td{font-size: 17px;}
+.checkbox {
+  padding-left: 20px; }
+  .checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 0px; }
+    .checkbox label::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      margin-left: -20px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+      background-color: #fff;
+      -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
+    .checkbox label::after {
+      display: inline-block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 0;
+      margin-left: -20px;
+      padding-left: 3px;
+      padding-top: 1px;
+      font-size: 11px;
+      color: #555555; }
+  .checkbox input[type="checkbox"] {
+    opacity: 0; }
+    .checkbox input[type="checkbox"]:focus + label::before {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
+    .checkbox input[type="checkbox"]:checked + label::after {
+      font-family: 'FontAwesome';
+      content: "\f00c";
+    font-size: 16px;}
+    .checkbox input[type="checkbox"]:disabled + label {
+      opacity: 0.65;font-size: 16px; }
+      .checkbox input[type="checkbox"]:disabled + label::before {
+        background-color: #eeeeee;
+        cursor: pointer;font-size: 16px; }
